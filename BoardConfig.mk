@@ -14,12 +14,12 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/wingtech/wt88047
+DEVICE_PATH := device/xiaomi/wt88047
 
 # Architecture
 TARGET_BOARD_SUFFIX := _32
 TARGET_ARCH := arm
-TARGET_ARCH_VARIANT := armv7-a-neon
+TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := cortex-a53
@@ -60,7 +60,12 @@ RECOVERY_GRAPHICS_USE_LINELENGTH := true
 TW_INCLUDE_CRYPTO := true
 TARGET_HW_DISK_ENCRYPTION := true
 TARGET_KEYMASTER_WAIT_FOR_QSEE := true
+TW_INCLUDE_FBE := true
+TW_INCLUDE_CRYPTO_FBE := true
+#TARGET_CRYPTFS_HW_PATH := vendor/qcom/opensource/commonsys/cryptfs_hw
 
 # TWRP specific build flags
 TW_THEME := portrait_hdpi
-TW_EXCLUDE_SUPERSU := true
+#TW_EXCLUDE_SUPERSU := true
+AB_OTA_UPDATER := false
+TW_USE_TOOLBOX := true

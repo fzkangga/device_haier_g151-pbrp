@@ -8,3 +8,8 @@ service sbinqseecomd /sbin/qseecomd
 
 on property:ro.crypto.state=encrypted
     start sbinqseecomd
+
+# Fix for partition Mounting
+on fs
+    wait /dev/block/platform/soc.0/${ro.boot.bootdevice}
+    symlink /dev/block/platform/soc.0/${ro.boot.bootdevice} /dev/block/bootdevice

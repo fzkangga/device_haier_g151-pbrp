@@ -1,20 +1,25 @@
 # Release name
 PRODUCT_RELEASE_NAME := wt88047
 
-# Inherit from the common Open Source product configuration
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+$(call inherit-product, build/target/product/embedded.mk)
 
 # Inherit from our custom product configuration
-$(call inherit-product, vendor/omni/config/common.mk)
+$(call inherit-product, vendor/pb/config/common.mk)
 
+# Charger
 PRODUCT_PACKAGES += \
-    charger_res_images \
-    charger
+    charger_res_images
+
+# Encryption
+PRODUCT_PACKAGES += \
+    libcryptfs_hw
+
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+      ro.hardware.keystore=msm8916
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/dt.img:dt.img \
     $(LOCAL_PATH)/prebuilt/kernel:kernel \
-    $(LOCAL_PATH)/recovery.fstab:root/etc/recovery.fstab
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := wt88047
