@@ -19,7 +19,7 @@ DEVICE_PATH := device/xiaomi/wt88047
 # Architecture
 TARGET_BOARD_SUFFIX := _32
 TARGET_ARCH := arm
-TARGET_ARCH_VARIANT := armv8-a
+TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := cortex-a53
