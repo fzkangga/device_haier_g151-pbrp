@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/xiaomi/wt88047
+DEVICE_PATH := device/wingtech/wt88047
 
 # Architecture
 TARGET_BOARD_SUFFIX := _32
