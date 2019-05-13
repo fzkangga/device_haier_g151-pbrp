@@ -68,4 +68,4 @@ TW_INCLUDE_CRYPTO_FBE := true
 TW_THEME := portrait_hdpi
 #TW_EXCLUDE_SUPERSU := true
 AB_OTA_UPDATER := false
-TW_USE_TOOLBOX := true
+#TW_USE_TOOLBOX := true
