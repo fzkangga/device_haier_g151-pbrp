@@ -1,11 +1,11 @@
-## TWRP device tree for Wingtech Redmi 2 (wt88047)
+## TWRP device tree for Smartfren Andromax A16C3H (g151)
 
-Add to `.repo/local_manifests/wt88047.xml`:
+Add to `.repo/local_manifests/g151.xml`:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-	<project name="TeamWin/android_device_wingtech_wt88047" path="device/wingtech/wt88047"  remote="github" revision="android-7.1" />
+	<project name="fzkangga/device_haier_g151-twrp" path="device/haier/g151"  remote="github" revision="android-7.1" />
 </manifest>
 ```
 
@@ -15,8 +15,6 @@ To build:
 
 ```sh
 . build/envsetup.sh
-lunch omni_wt88047-eng
+lunch omni_g151-eng
 mka recoveryimage
 ```
-
-Kernel sources are available at: https://github.com/LineageOS/android_kernel_wingtech_msm8916
